@@ -1,0 +1,9 @@
+# The Root Query for the application
+type Query {
+    # articles
+    article(id: String): [Article]
+
+    # manufacturers
+    manufacturer(id: String): [Manufacturer]
+
+}

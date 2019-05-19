@@ -1,0 +1,28 @@
+enum Season {
+    AUTUMN_AND_WINTER,
+    SPRING_AND_SUMMER
+}
+
+type Manufacturer {
+    id: String
+    name: String!
+    articles: [Article]!
+}
+
+type Article {
+    id: String,
+    title: String!
+    image: String!
+    quantity: String!
+    season: Season!
+    year: String!
+}
+
+type Order {
+    articleId: String,
+    quantity: Int
+}
+
+type ShoppingCard {
+    orders: [Order]
+}

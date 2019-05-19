@@ -1,0 +1,41 @@
+graphql-demo-application:
+  api-base-path: /api
+
+spring:
+  application:
+    name: graphql-demo-application
+  servlet:
+    multipart:
+      enabled: true
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+graphql:
+  tools:
+    schema-location-pattern: "**/*.graphql"
+    # Enable or disable the introspection query. Disabling it puts your server in contravention of the GraphQL
+    # specification and expectations of most clients, so use this option with caution
+  servlet:
+    actuator-metrics: true
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+    subscriptions: /subscriptions
+  subscriptions:
+    timeout: 30
+    reconnect: false
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+  cdn:
+    enabled: false
+    version: 0.13.0
+  props:
+    variables:
+      editorTheme: "solarized light"
