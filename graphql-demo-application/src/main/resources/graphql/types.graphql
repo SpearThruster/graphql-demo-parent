@@ -4,18 +4,19 @@ enum Season {
 }
 
 type Manufacturer {
-    id: String
+    id: Int!
     name: String!
     articles: [Article]!
 }
 
 type Article {
-    id: String,
+    id: Int!,
     title: String!
     image: String!
     quantity: String!
     season: Season!
     year: String!
+    manufacturers: Manufacturer
 }
 
 type Order {

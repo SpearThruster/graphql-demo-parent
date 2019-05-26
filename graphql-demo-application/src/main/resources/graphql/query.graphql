@@ -1,9 +1,9 @@
 # The Root Query for the application
 type Query {
     # articles
-    article(id: String): [Article]
+    article(id: Int): [Article]
 
-    # manufacturers
-    manufacturer(id: String): [Manufacturer]
+#    # manufacturers
+    manufacturer(id: Int): [Manufacturer]
 
 }

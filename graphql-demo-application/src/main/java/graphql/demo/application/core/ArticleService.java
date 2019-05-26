@@ -23,7 +23,7 @@ public class ArticleService {
                     Article.builder()
                         .image("12312321321")
                         .title(format("Article%d", x))
-                        .id(valueOf(x))
+                        .id(x)
                         .quantity((int) (Math.random() * 100))
                         .build())
             .collect(Collectors.toList());

@@ -20,7 +20,7 @@ public class QueryResolver implements GraphQLQueryResolver {
   private ArticleService articleService;
   private ManufacturerService manufacturerService;
 
-  public List<Article> getArticle(String id) {
+  public List<Article> getArticle(Integer id) {
 
     if (id == null) {
       return articleService.findAll();
@@ -29,11 +29,14 @@ public class QueryResolver implements GraphQLQueryResolver {
     }
   }
 
-  public List<Manufacturer> getManufacturer(String id) {
+
+  public List<Manufacturer> getManufacturer(Integer id) {
     if (id == null) {
       return manufacturerService.findAll();
     } else {
       return newArrayList(manufacturerService.findAll().get(0));
     }
   }
+
+
 }

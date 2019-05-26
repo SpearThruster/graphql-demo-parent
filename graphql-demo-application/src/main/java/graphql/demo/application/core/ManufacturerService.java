@@ -24,7 +24,7 @@ public class ManufacturerService {
                     Manufacturer.builder()
                         .name(format("Manufacturer-%d", x))
                         .articles(articleService.findAll())
-                        .id(valueOf(x))
+                        .id(x)
                         .build())
             .collect(Collectors.toList());
     manufacturers.addAll(demoProducts);
@@ -35,6 +35,11 @@ public class ManufacturerService {
   }
 
   public List<Manufacturer> findAll() {
+    return manufacturers;
+  }
+
+  public List<Manufacturer> findAllById(List<Integer> ids) {
+    System.out.println("Are you called once?");
     return manufacturers;
   }
 }

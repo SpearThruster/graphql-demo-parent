@@ -38,16 +38,6 @@
         <artifactId>graphql-demo-ui</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.sun.xml.ws</groupId>
-        <artifactId>rt</artifactId>
-        <version>${rt.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-        <version>${cxf-spring-boot-starter-jaxws.version}</version>
-      </dependency>
 
       <!-- graphql dependencies -->
       <dependency>

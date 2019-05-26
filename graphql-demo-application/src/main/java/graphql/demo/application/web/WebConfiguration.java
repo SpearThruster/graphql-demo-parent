@@ -1,6 +1,6 @@
 package graphql.demo.application.web;
 
-import graphql.demo.application.config.GraphQLConfiguration;
+import graphql.demo.application.config.ApplicationConfiguration;
 import lombok.AllArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.resource.PathResourceResolver;
 @AllArgsConstructor
 public class WebConfiguration implements WebMvcConfigurer {
 
-  private final GraphQLConfiguration configuration;
+  private final ApplicationConfiguration configuration;
 
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {

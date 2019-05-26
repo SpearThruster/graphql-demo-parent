@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Manufacturer {
 
-  private String id;
+  private Integer id;
   private String name;
   private List<Article> articles;
 }
