@@ -7,6 +7,11 @@ type Manufacturer {
     id: Int!
     name: String!
     articles: [Article]!
+    country: String
+}
+
+input ManufacturerSearchCriteria {
+    country: String
 }
 
 type Article {
@@ -16,7 +21,7 @@ type Article {
     quantity: String!
     season: Season!
     year: String!
-    manufacturers: Manufacturer
+    manufacturers(search: ManufacturerSearchCriteria): [Manufacturer]
 }
 
 type Order {

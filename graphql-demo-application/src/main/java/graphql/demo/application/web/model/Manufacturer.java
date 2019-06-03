@@ -16,4 +16,5 @@ public class Manufacturer {
   private Integer id;
   private String name;
   private List<Article> articles;
+  private String country;
 }
